@@ -1,2 +1,2 @@
 # Prova.Logica
-Provas Logicas para processo seletivo.
+Provas Logicas em Console C# para processos seletivos.
