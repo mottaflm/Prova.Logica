@@ -6,6 +6,17 @@ using System.Threading.Tasks;
 
 namespace Exercicio01
 {
+    //1. Uma concessionária de carros está vendendo os seus veículos com desconto.
+    //Faça um algoritmo em Portugol(ou na linguagem de sua preferência) que calcule e exiba o valor do desconto e o valor a ser pago pelo cliente de vários carros.
+
+    //O desconto deverá ser calculado de acordo com o ano do veículo.
+
+    //Até 2000 - 12%
+    //Acima de 2000 - 7%
+
+    //O algoritmo deverá perguntar se deseja continuar calculando desconto até que a resposta seja “N” (Não).
+    //Informar total de carros com ano até 2000 e total geral.
+
     public class Program
     {
 
@@ -26,7 +37,14 @@ namespace Exercicio01
                 Console.WriteLine("\nInforme o ano do veículo:");
                 var yearInput = Console.ReadLine();
 
-                CalculateDiscount(float.Parse(valueInput), short.Parse(yearInput));
+                try
+                {
+                    CalculateDiscount(float.Parse(valueInput), short.Parse(yearInput));
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e);
+                }
 
                 Console.WriteLine("\nDeseja continuar calculando desconto de veículos? (Y/N):");
                 resposta = Console.ReadLine().ToUpper();
