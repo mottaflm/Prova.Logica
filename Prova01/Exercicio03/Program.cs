@@ -15,15 +15,15 @@ namespace Exercicio03
     //    mens: caractere
     //inicio
     //    ler a, b, c
-    //   se(a<b+c) e(b<a+c) e(c<a+b) entao
-    //se(a = b) e(b = c) entao
-    //mens<- "Triângulo Equilátero"
+    //   se(a<b+c) e (b<a+c) e (c<a+b) entao
+    //      se(a = b) e (b = c) entao
+    //          mens <- "Triângulo Equilátero"
     //      senao
-    //         se (a = b) ou(b = c) ou(a = c) então
-    //          mens<- "Triângulo Isósceles"
-    //         senao
-    //            mens <- "Triângulo Escaleno"
-    //         fim-se
+    //          se (a = b) ou (b = c) ou (a = c) então
+    //              mens <- "Triângulo Isósceles"
+    //          senao
+    //              mens <- "Triângulo Escaleno"
+    //          fim-se
     //      fim-se
     //   senao
     //      mens <- "Não e possível formar um triângulo"
@@ -40,16 +40,45 @@ namespace Exercicio03
     //e) a = 5, b = 3, c = 3
 
     //RESPOSTAS:
-    //A)
-    //B)
-    //C)
-    //D)
-    //E)
+    //A) "Não é possível formar um triângulo"
+    //B) "Triângulo Escaleno"
+    //C) "Não é possível formar um triângulo"
+    //D) "Triângulo Equilátero"
+    //E) "Triângulo Isósceles"
 
     class Program
     {
         static void Main(string[] args)
         {
+            //Loop para permitir o uso continuo do programa 
+            while (true)
+            {
+                int a, b, c;
+                string mens;
+
+                a = int.Parse(Console.ReadLine());
+                b = int.Parse(Console.ReadLine());
+                c = int.Parse(Console.ReadLine());
+
+                if (a < b + c && b < a + c && c < a + b)
+                {
+                    if (a == b && b == c)
+                        mens = "Triângulo Equilátero";
+                    else
+                    {
+                        if (a == b || b == c || a == c)
+                            mens = "Triângulo Isósceles";
+                        else
+                            mens = "Triângulo Escaleno";
+                    }
+                }
+                else
+                {
+                    mens = "Não é possível formar um triângulo";
+                }
+
+                Console.WriteLine(mens);
+            }
         }
     }
 }

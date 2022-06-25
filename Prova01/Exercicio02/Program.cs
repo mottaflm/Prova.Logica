@@ -20,11 +20,8 @@ namespace Exercicio02
         {
             Console.WriteLine("Calculo de Média e Aprovação");
 
-            int codAluno = -1;
-            float nota01 = 0f;
-            float nota02 = 0f;
-            float nota03 = 0f;
-            float notaFinal = 0f;
+            int codAluno;
+            float nota01, nota02, nota03, notaFinal;
 
             while(true)
             {
