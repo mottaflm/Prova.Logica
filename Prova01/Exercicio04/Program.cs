@@ -73,6 +73,7 @@ namespace Exercicio04
 
                     //Adicionando Juros calculado
                     valorBoletoRecalculado = valorBoleto + valorJuros;
+
                     Console.WriteLine($"\n\nO valor do boleto com a nova data de vencimento {dataPagamento.ToString("dd/MM/yyyy")} será de R${valorBoletoRecalculado.ToString("0.00")} sendo R${valorJuros.ToString("0.00")} de Juros!");
                 }
                 catch (Exception e)
