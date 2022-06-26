@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercicio01
 {
@@ -62,13 +58,13 @@ namespace Exercicio01
 
             if (year > 2000)
             {
-                result = value - (7 * value / 100);
+                result = value - (value * 0.07f);
                 Console.WriteLine($"\nO valor de R${value} de um veículo de {year} sai com desconto de 7% totalizando: R${result}");
                 NewCarsCounter++;
                 return;
             }
 
-            result = value - (12 * value / 100);
+            result = value - (value * 0.12f);
             Console.WriteLine($"\nO valor de R${value} de um veículo de {year} sai com desconto de 12% totalizando: R${result}");
             OldCarsCounter++;
         }
