@@ -27,7 +27,7 @@ namespace Exercicio02
                     codAluno = int.Parse(Console.ReadLine());
 
                     if (codAluno == 0)
-                        return;
+                        break;
 
                     Console.WriteLine("\nInforme a primeira nota: ");
                     nota01 = float.Parse(Console.ReadLine());

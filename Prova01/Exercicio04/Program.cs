@@ -148,7 +148,7 @@ namespace Exercicio04
 
         private static bool VerificaFeriado(DateTime valorData)
         {
-            //Criando a coleção de datas que possuem feriados nacionais FIXOS
+            //Criando a coleção de datas e adicionando feriados nacionais que possuem datas FIXAS
             //Utilizado como base: https://www.calendarr.com/brasil/feriados-nacionais-e-pontos-facultativos/
 
             HashSet<DateTime> diasDeFeriado = new HashSet<DateTime>();
@@ -162,6 +162,7 @@ namespace Exercicio04
             diasDeFeriado.Add(DateTime.Parse("15/11/" + valorData.Year)); //Proclamação da Republica
             diasDeFeriado.Add(DateTime.Parse("25/12/" + valorData.Year)); //Natal
 
+            //Adicionando na coleção feriados nacionais com datas flexíveis
             diasDeFeriado.Add(CalcularFeriado(valorData.Year, FeriadoEnum.Carnaval)); //Carnaval
             diasDeFeriado.Add(CalcularFeriado(valorData.Year, FeriadoEnum.QuartaCinzas)); //Quarta-feira de Cinzas
             diasDeFeriado.Add(CalcularFeriado(valorData.Year, FeriadoEnum.SextaSanta)); //Sexta-Feira Santa
